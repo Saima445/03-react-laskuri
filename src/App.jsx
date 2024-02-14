@@ -1,20 +1,12 @@
 import { useState } from "react";
 
-const Display = (props) => {
-  return (
-    <section>
-      <p>{props.counter}</p>
-    </section>
-  );
-};
+const Display = ({ counter }) => <section>{counter}</section>;
 
-const Button = (props) => {
-  return (
-    <section>
-      <button onClick={props.handleClick}>{props.text}</button>
-    </section>
-  );
-};
+const Button = ({ handleClick, text }) => (
+  // <section>
+  <button onClick={handleClick}>{text}</button>
+  // </section>
+);
 
 const App = () => {
   const [counter, setCounter] = useState(0);
